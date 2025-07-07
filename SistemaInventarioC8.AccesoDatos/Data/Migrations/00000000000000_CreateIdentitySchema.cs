@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SistemaInventarioC8.Data.Migrations
+namespace SistemaInventarioC8.AccesoDatos.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

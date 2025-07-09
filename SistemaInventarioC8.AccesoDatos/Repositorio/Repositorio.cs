@@ -21,13 +21,6 @@ namespace SistemaInventarioC8.AccesoDatos.Repositorio
             _db = db;
             this.dbSet = _db.Set<T>();
         }
-        //public async Task Actualizar(T entidad)
-        //{
-        //    await Task.Run(() => 
-        //    {
-        //        _db.Entry(entidad).State = EntityState.Modified; //Actualizar el estado de la entidad a modificada
-        //    });
-        //}
 
         public async Task Agregar(T entidad)
         {

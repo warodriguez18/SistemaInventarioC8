@@ -23,7 +23,6 @@ namespace SistemaInventarioC8.AccesoDatos.Repositorio.IRepositorio
             bool isTracking = true
             );
         Task Agregar(T entidad);
-        Task Actualizar(T entidad);
         Task Remover(long id);
         Task RemoverRango(IEnumerable<T> entidad);
     }

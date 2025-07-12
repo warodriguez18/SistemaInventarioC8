@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemaInventarioC8.Utilidades
 {
-    internal class DS
+    public class DS
     {
+        public const string Exitosa = "Exitosa";
+        public const string Error = "Error";
     }
 }

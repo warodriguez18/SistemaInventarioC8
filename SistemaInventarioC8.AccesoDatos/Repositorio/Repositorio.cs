@@ -79,15 +79,11 @@ namespace SistemaInventarioC8.AccesoDatos.Repositorio
             return await query.ToListAsync(); //Devolver todos los resultados
         }
 
-        public async Task Remover(long id)
+        public async Task Remover(T entidad)
         {
             await Task.Run(() => 
             {
-                T entidad = dbSet.Find(id); //Buscar la entidad por su ID
-                if (entidad != null)
-                {
-                    dbSet.Remove(entidad); //Eliminar la entidad de la base de datos
-                }
+                dbSet.Remove(entidad); //Eliminar una entidad de la base de datos
             });
         }
 

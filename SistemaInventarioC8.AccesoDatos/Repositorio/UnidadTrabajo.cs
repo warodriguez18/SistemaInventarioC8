@@ -1,5 +1,6 @@
 ﻿using SistemaInventarioC8.AccesoDatos.Data;
 using SistemaInventarioC8.AccesoDatos.Repositorio.IRepositorio;
+using SistemaInventarioC8.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,14 @@ namespace SistemaInventarioC8.AccesoDatos.Repositorio
         private readonly ApplicationDbContext _db;
         public IBodegaRepositorio Bodega { get; private set; }
         public ICategoriaRepositorio Categoria { get; private set; }
+        public IMarcaRepositorio Marca { get; private set; }
 
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
             Bodega = new BodegaRepositorio(_db);
             Categoria = new CategoriaRepositorio(_db);
+            Marca = new MarcaRepositorio(_db);
         }
         public void Dispose()
         {

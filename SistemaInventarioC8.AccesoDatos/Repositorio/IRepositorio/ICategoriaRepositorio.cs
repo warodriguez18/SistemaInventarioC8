@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemaInventarioC8.AccesoDatos.Repositorio.IRepositorio
 {
-    public interface IUnidadTrabajo : IDisposable
+    public interface ICategoriaRepositorio: IRepositorio<Modelos.Categoria>
     {
-        IBodegaRepositorio Bodega { get; }
-        ICategoriaRepositorio Categoria { get; }
-
-        Task Guardar();
+        void Actualizar(Modelos.Categoria categoria);
+       
     }
 }
